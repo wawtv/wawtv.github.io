@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Tabs</title>
+  <link rel="stylesheet" href="styles.css">
+<style>
+/* Basic Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #fff;
+  color: #000;
+  padding: 20px;
+}
+
+/* Tabs container */
+.tabs-container {
+  width: 100%;
+  max-width: 800px;
+  margin: auto;
+  border: 1px solid #000;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: #fff;
+}
+
+/* Tabs Style */
+.tabs {
+  display: flex;
+  list-style: none;
+  background-color: #000;
+}
+
+.tab {
+  flex: 1;
+  text-align: center;
+  padding: 14px;
+  cursor: pointer;
+  color: #fff;
+  transition: background-color 0.3s;
+}
+
+.tab:hover {
+  background-color: #444;
+}
+
+.tab.active {
+  background-color: #fff;
+  color: #000;
+  font-weight: bold;
+}
+
+/* Content Style */
+.tab-content {
+  display: none;
+  padding: 20px;
+  background-color: #f4f4f4;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .tabs {
+    flex-direction: column;
+  }
+
+  .tab {
+    padding: 10px;
+  }
+}
+
+
+</style>
+</head>
+<body>
+  <div class="tabs-container">
+    <ul class="tabs">
+      <li class="tab" id="tab1">server 1</li>
+      <li class="tab" id="tab2">serve 2</li>
+      <li class="tab" id="tab3">server 3</li>
+      <li class="tab" id="tab4">server 4</li>
+    </ul>
+    <div class="tab-content" id="content1">
+      <h2>Content for Tab 1</h2>
+      <p>This is the content of Tab 1.</p>
+    </div>
+    <div class="tab-content" id="content2">
+      <h2>Content for Tab 2</h2>
+      <p>This is the content of Tab 2.</p>
+    </div>
+    <div class="tab-content" id="content3">
+      <h2>Content for Tab 3</h2>
+      <p>This is the content of Tab 3.</p>
+    </div>
+    <div class="tab-content" id="content4">
+      <h2>Content for Tab 4</h2>
+      <p>This is the content of Tab 4.</p>
+    </div>
+  </div>
+
+  <script>
+    // JavaScript to toggle tabs
+    const tabs = document.querySelectorAll('.tab');
+    const contents = document.querySelectorAll('.tab-content');
+
+    tabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        tabs.forEach(t => t.classList.remove('active'));
+        contents.forEach(content => content.classList.remove('active'));
+        
+        tab.classList.add('active');
+        document.getElementById('content' + tab.id.slice(-1)).classList.add('active');
+      });
+    });
+
+    // Set default active tab
+    document.getElementById('tab1').classList.add('active');
+    document.getElementById('content1').classList.add('active');
+  </script>
+</body>
+</html>
+
+
+
+
+
