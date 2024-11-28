@@ -1,0 +1,36 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Digital clock widget</title>
+<style type="text/css">
+* {margin:0;padding:0}
+/* mac hide \*/
+html,body{height:100%;width:100%;}
+/* end hide */
+body {text-align:center;background-color:transparent;}
+#outer{height:99%;width:99%;display:table;vertical-align:middle;}
+#container {text-align: center;position:relative;vertical-align:middle;display:table-cell;font-family:impact;}
+#clock {text-align: center;margin-left:auto;margin-right:auto;}
+a, a:active, a:hover, a:focus, a:link, a:visited { color:red; }
+
+/*====== Calculator ========*/
+#calculator table{margin:auto;background-color:red;width:300px;height:325px;text-align:center;border-radius:4px}
+#calculator{left:58%;top:10%}
+#calculator input{outline:0;position:relative;left:5px;top:5px;border:0;color:#f7f9ff; background-color:black; border-radius:4px;width:60px;height:50px;float:left;margin:5px;font-size:20px;box-shadow:0 4gba(0,0,0,0.2)}
+#calculator input:hover{border:0 solid #000;color:#FFFFFF;background-color:#08fc13; border-radius:4px;width:60px;height:50px;float:left;margin:5px;font-size:20px;transition:all 0.3s ease-out;box-shadow:0 0 6px rgba(0,0,0,0.27)}
+#calculator input:active{top:4px;border:0 solid #000;color:#495069;background-color:#8F5FD4;border-radius:4px;width:60px;height:50px;float:left;margin:5px;font-size:20px;box-shadow:none}
+#calculator #answer{width:270px;font-size:26px;text-align:center;background-color:black; float:left}
+#calculator #answer:hover{width:270px;font-size:26px;text-align:center;background-color:white; color:black; box-shadow:0 4px rgba(0,0,0,0.2)}
+#calculator #answer:active{top:5px;width:270px;font-size:26px;text-align:center;background-color:#F1FAEB;box-shadow:0 4px rgba(0,0,0,0.2)}
+#calculator .operator{background-color:#0030ff; position:relative}
+#calculator .operator:active{top:4px;box-shadow:none}
+#calculator #clear{float:left;position:relative;display:block;background-color:yellow; color:black; margin-bottom:15px}
+#calculator #clear:hover{float:left;display:block;background-color:blue; color:white; margin-bottom:15px}
+#calculator #clear:active{float:left;top:4px;display:block;background-color:#F297A0;margin-bottom:15px;box-shadow:none}
+.cbalink {display: none;}
+/*======= Calculator =========*/
+</style></head><body>  
+<div id="outer"><div id="container">
+<div id='calculator'><form name="calc"><table><tbody><tr><td><input type="text" name="input" size="16" id="answer" /><br /></td></tr><tr><td><input type="button" name="one" value=" 1 " onclick="calc.input.value += &#39;1&#39;" /><input type="button" name="two" value=" 2 " onclick="calc.input.value += &#39;2&#39;" /><input type="button" name="three" value=" 3 " onclick="calc.input.value += &#39;3&#39;" /><input type="button" class="operator" name="plus" value=" + " onclick="calc.input.value += &#39;+ &#39;" /><br /><input type="button" name="four" value=" 4 " onclick="calc.input.value += &#39;4&#39;" /><input type="button" name="five" value=" 5 " onclick="calc.input.value += &#39;5&#39;" /><input type="button" name="six" value=" 6 " onclick="calc.input.value += &#39;6&#39;" /><input type="button" class="operator" name="minus" value=" - " onclick="calc.input.value += &#39;- &#39;" /><br /><input type="button" name="seven" value=" 7 " onclick="calc.input.value += &#39;7&#39;" /><input type="button" name="eight" value=" 8 " onclick="calc.input.value += &#39;8&#39;" /><input type="button" name="nine" value=" 9 " onclick="calc.input.value += &#39;9&#39;" /><input type="button" class="operator" name="times" value=" x " onclick="calc.input.value += &#39;* &#39;" /><br /><input type="button" id="clear" name="clear" value=" c " onclick="calc.input.value = &#39;&#39;" /><input type="button" name="zero" value=" 0 " onclick="calc.input.value += &#39;0&#39;" /><input type="button" name="doit" value=" = " onclick="calc.input.value = eval(calc.input.value)" /><input type="button" class="operator" name="div" value=" / " onclick="calc.input.value += &#39;/ &#39;" /><br />
+</td></tr></tbody></table></form></div></div></div></body></html>
