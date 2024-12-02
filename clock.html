@@ -1,30 +1,24 @@
-
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Digital Clock</title>
-  <link rel="stylesheet" href="style.css">
-
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Digital Clock</title>
+<link rel="stylesheet" href="style.css">
 <style>
+* {margin: 0;  padding: 0;  box-sizing: border-box; }
+html, body {height: 100%;  width: 100%;}
 body {
-  margin: 0;
-  padding: 0;
-  background-color: black;
-  color: green;
-  font-family: 'Courier New', Courier, monospace;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  overflow: hidden;
+background: #0d0d0d; //black;
+display: flex;
+justify-content: center;
+align-items: center;
 }
-
 #clock {
-  font-size: 10vw;
-  text-shadow: 0 0 20px green, 0 0 30px green, 0 0 40px green;
+font-size: 22vw; font-weight: 700;
+color: #27ff0a; //green
+font-family: Arial,sans-serif;
+text-shadow: 0 0 20px green, 0 0 30px white, 0 0 40px white;
+line-height: 20.4vh;
+display: flex;
+position: relative;
 }
 
 </style>
