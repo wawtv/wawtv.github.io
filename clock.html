@@ -3,6 +3,7 @@
 <title>Digital Clock</title>
 <link rel="stylesheet" href="style.css">
 <style>
+@font-face {font-family: digital; src: url(https://kicktv.github.io/clock/digital.ttf); }
 * {margin: 0;  padding: 0;  box-sizing: border-box; }
 html, body {height: 100%;  width: 100%;}
 body {
@@ -12,10 +13,10 @@ justify-content: center;
 align-items: center;
 }
 #clock {
+font-family: Arial,sans-serif;
 font-size: 22vw; font-weight: 700;
 color: #27ff0a; //green
-font-family: Arial,sans-serif;
-text-shadow: 0 0 20px green, 0 0 30px white, 0 0 40px white;
+text-shadow: 0 0 20px green, 0 0 30px green, 0 0 40px green;
 line-height: 20.4vh;
 display: flex;
 position: relative;
