@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Login Page</title>
+
+<style>
+
+/* ================ GOOGLE FONT ================ */
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+/* ================ BASE ================ */
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	font-family: 'Quicksand', sans-serif;
+}
+
+body {
+	background-color: #444; //#222;
+	color: #fff;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
+/* ================ AUTH ================ */
+.auth {
+	min-height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.auth__box {
+	max-width: 530px; //400px;
+	width: 98%;
+	padding: 40px;
+	border-radius: 5px;
+	background-color: #222;
+	box-shadow: 0 15px 35px rgba(0, 0, 0, 0.9);
+}
+
+.auth__heading {
+	font-size: 32px;
+	color: #0f0;
+	text-transform: uppercase;
+	text-align: center;
+	margin-bottom: 40px;
+}
+
+.auth__form {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	gap: 25px;
+}
+
+.auth__form-field {
+	position: relative;
+}
+
+.auth__form-field > input {
+	width: 100%;
+	border: none;
+	outline: none;
+	padding: 25px 10px 8px;
+	border-radius: 5px;
+	color: inherit;
+	background-color: #333;
+	font-size: 16px;
+	font-weight: 500;
+}
+
+.auth__form-field > span {
+	position: absolute;
+	left: 10px;
+	top: 0;
+	bottom: 0;
+	margin: auto 0;
+	height: fit-content;
+	color: #aaa;
+	pointer-events: none;
+	transition: all 500ms ease;
+}
+
+.auth__form-field > input:focus ~ span,
+.auth__form-field > input:valid ~ span {
+	transform: translateY(-7.5px);
+	font-size: 13px;
+	color: #fff;
+}
+
+.auth__form-links {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.auth__form-forgot,
+.auth__form-register {
+	font-weight: 500;
+	transition: color 300ms ease-in-out;
+}
+
+.auth__form-forgot:hover {
+	color: #0f0;
+}
+
+.auth__form-register {
+	color: #0f0;
+}
+
+.auth__form-register:hover {
+	color: #fff;
+}
+
+.auth__form-btn {
+	background-color: #0f0;
+	color: #000;
+	padding: 10px;
+	font-size: 21px;
+	font-weight: 600;
+	letter-spacing: 0.8px;
+	cursor: pointer;
+	border: none;
+	border-radius: 5px;
+	transition: background-color 300ms ease-in-out;
+}
+
+.auth__form-btn:hover {
+	background-color: #fff;
+}
+
+
+</style>
+</head>
+
+<body>
+
+	<main class="main">
+		<section class="auth">
+			<div class="auth__box">
+				<h1 class="auth__heading">
+					sign in
+				</h1>
+				<form action="#" class="auth__form">
+					<div class="auth__form-field">
+						<input type="text" required>
+						<span>Username</span>
+					</div>
+					<div class="auth__form-field">
+						<input type="password" required>
+						<span>Password</span>
+					</div>
+					<div class="auth__form-links">
+<!--
+<a href="/forgot" class="auth__form-forgot">
+							Forgot Password?
+						</a>
+						<a href="/register" class="auth__form-register">
+							Register
+						</a>
+-->
+
+					</div>
+					<button class="auth__form-btn" type='submit'>Login</button>
+				</form>
+			</div>
+		</section>
+	</main>
+
+</body>
+
+</html>
